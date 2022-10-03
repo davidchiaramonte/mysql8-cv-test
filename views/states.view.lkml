@@ -34,7 +34,7 @@ view: states {
     sql: ${TABLE}.longitude ;;
   }
 
-  dimension: name {
+  dimension: name_renamed {
     type: string
     sql: ${TABLE}.name ;;
   }
@@ -49,8 +49,8 @@ view: states {
     sql: ${TABLE}.type ;;
   }
 
-  measure: count {
+  measure: count_renamed {
     type: count
-    drill_fields: [id, name, country_name, cities.count]
+    drill_fields: [id, name_renamed, country_name, cities.count]
   }
 }
